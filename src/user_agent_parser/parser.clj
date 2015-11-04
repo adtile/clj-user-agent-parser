@@ -15,20 +15,12 @@
   (MultithreadedUASparser. (-> path resource input-stream)))
 
 (defn parse [^UASparser parser ^String user-agent-string]
-  (let [user-agent (. parser parse user-agent-string)
-        has-info (. user-agent hasDeviceInfo)
-        is-robot (. user-agent isRobot)
-        browser-family (. user-agent getUaFamily)
-        browser-name (. user-agent getUaName)
-        device-type (. user-agent getDeviceType)
-        typ3 (. user-agent getType)
-        os-family (. user-agent getOsFamily)
-        os-name (. user-agent getOsName)]
-    {:has-info? has-info
-     :robot? is-robot
-     :browser-family (string->keyword browser-family)
-     :browser-name (string->keyword browser-name)
-     :device-type (string->keyword device-type)
-     :type (string->keyword typ3)
-     :os-family (string->keyword os-family)
-     :os-name (string->keyword os-name)}))
+  (let [user-agent (. parser parse user-agent-string)]
+    {:has-info? (. user-agent hasDeviceInfo)
+     :robot? (. user-agent isRobot)
+     :browser-family (. user-agent getUaFamily)
+     :browser-name (. user-agent getUaName)
+     :device-type (. user-agent getDeviceType)
+     :type (. user-agent getType)
+     :os-family (. user-agent getOsFamily)
+     :os-name (. user-agent getOsName)}))
