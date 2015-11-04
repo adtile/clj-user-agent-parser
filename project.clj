@@ -1,4 +1,4 @@
-(defproject clj-user-agent-parser "0.0.2"
+(defproject clj-user-agent-parser "0.0.3"
   :description "Library for parsing user agent header"
   :url "https://github.com/adtile/clj-user-agent-parser"
   :license {:name "MIT"}
