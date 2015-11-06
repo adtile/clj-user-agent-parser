@@ -1,6 +1,10 @@
 # clj-user-agent-parser
 Parses browser information from user agent header
 
+## Build Status
+
+[![Build Status](https://travis-ci.org/adtile/clj-user-agent-parser.svg)](https://travis-ci.org/adtile/clj-user-agent-parser)
+
 ## Usage
 
 ```clojure
